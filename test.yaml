@@ -5,3 +5,8 @@
   - name: test
     shell:
       /bin/echo 'hello world!'
+    register: test_result
+  
+  - name: output
+    debug:
+      var: test_result.stdout_lines
